@@ -2,11 +2,11 @@ package ru.netology.stats.ZhukovDZ6.services;
 
 public class StatsService {
     public long sumAllSales(long[] sales) {
-        long SumSales = 0;
+        long sumSales = 0;
         for (long sale : sales) {
-            SumSales += sale;
+            sumSales += sale;
         }
-        return SumSales;
+        return sumSales;
     }
 
     public long averageSalesAmount(long[] sales) {
@@ -50,11 +50,11 @@ public class StatsService {
     }
 
     public int aboveAverageSales(long[] sales) {
-        long MonthsAboveAverage = averageSalesAmount(sales);
+        long monthsAboveAverage = averageSalesAmount(sales);
         int numberOfMonths = 0;
 
         for (long sale : sales) {
-            if (sale > MonthsAboveAverage) {
+            if (sale > monthsAboveAverage) {
                 numberOfMonths++;
             }
         }
